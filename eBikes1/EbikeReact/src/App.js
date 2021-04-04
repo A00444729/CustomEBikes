@@ -1,30 +1,27 @@
-import React, {Component} from 'react';
-import {Route} from 'react-router';
-import {Layout} from './components/Layout';
-import {Home} from './components/Home';
-import {FetchData} from './components/FetchData';
-import {CounterClass} from './components/CounterClass';
-import './custom.css'
-import {Counter} from "./components/Counter";
-import SignIn from "./components/SignIn";
-import CustomerTableReact from "./DataTables/CustomerTable";
-import Pricing from "./components/Pricing";
+import logo from './logo.svg';
+import './App.css';
+import Navigation from './Components/Navigation';
+import Banner from './Components/Banner';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-export default class App extends Component {
-    static displayName = App.name;
-
-    render() {
-        return (
-            <Layout>
-                <Route exact path='/' component={Home}/>
-                {/*<Route exact path='/' component={HomeClass} />*/}
-                <Route exact path='/SignIn' component={SignIn}/>
-                <Route path='/counter' component={Counter}/>
-                <Route path='/pricing' component={Pricing}/>
-                <Route path='/customerTableReact' component={CustomerTableReact}/>
-                <Route path='/counterClass' component={CounterClass}/>
-                <Route path='/fetch-data' component={FetchData}/>
-            </Layout>
-        );
-    }
+function App() {
+  return (
+    <div>
+      <Navigation />
+      <BrowserRouter>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
+        </Route><Route exact path="/">
+          <Banner />
+        </Route>
+      </BrowserRouter>
+    </div>
+  );
 }
+
+export default App;
