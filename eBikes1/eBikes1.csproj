@@ -33,11 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Customers\Create.cshtml" />
-    <None Include="Views\Customers\Delete.cshtml" />
-    <None Include="Views\Customers\Details.cshtml" />
-    <None Include="Views\Customers\Edit.cshtml" />
-    <None Include="Views\Customers\Index.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
@@ -67,6 +62,10 @@
     <None Include="wwwroot\lib\jquery\dist\jquery.js" />
     <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
     <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Customers\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

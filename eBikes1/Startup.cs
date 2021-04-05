@@ -41,8 +41,8 @@ namespace eBikes1
             }));
 
 
-            services.AddDbContext<CustomerContext>(options =>
-                   options.UseSqlServer(Configuration.GetConnectionString("myDbConn")));
+            //services.AddDbContext<CustomerContext>(options =>
+                   //options.UseSqlServer(Configuration.GetConnectionString("myDbConn")));
 
             //Integrations
 
