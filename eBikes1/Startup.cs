@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using eBikes1.Models;
 
 namespace eBikes1
 {
@@ -41,7 +42,7 @@ namespace eBikes1
             }));
 
 
-            services.AddDbContext<CustomerContext>(options =>
+            services.AddDbContext<inclassContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("myDbConn")));
 
             //Integrations
